@@ -1,0 +1,60 @@
+/* ---- GENERAL ---- */
+
+body {
+  font family: 'Meriweather Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 1em;
+}
+
+/* ---- Wrappers ---- */
+
+.wrapper-transparent {
+  max-width: 940px;
+  margin 0 auto;
+  padding 30px 5%;
+}
+
+.wrapper-portfolio {
+  max-width: 940px;
+  background-color: white;
+  margin 0 auto;
+  padding 30px 5%;
+}
+
+/* ---- Menu Parameters ---- */
+
+.menu {
+  text-align: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+}
