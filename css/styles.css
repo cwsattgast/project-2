@@ -37,6 +37,7 @@ p {
 
 a {
   text-decoration: none;
+  color: #606060;
 }
 
 li {
@@ -91,6 +92,7 @@ hr.faded-edge {
 
 .menu {
   font-weight: 700;
+  text-transform: uppercase;
   padding: 0;
 }
 
@@ -100,10 +102,6 @@ hr.faded-edge {
   margin: 0 auto 5px;
   max-width: 90%;
   padding: 12px 0;
-}
-
-.menu a:hover {
-	color: #1c5a80;
 }
 
 /* ---- Main body styles ---- */
