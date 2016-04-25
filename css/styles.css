@@ -45,10 +45,12 @@ a:hover {
 }
 
 ol, ul {
-  padding: 0;
+  /*display: flex;*/
+  /*padding: 0;*/
 }
 
 li {
+  /*display: flex;*/
   font-size: .9em;
 }
 
@@ -67,8 +69,9 @@ hr.faded-edge {
 /* ---- Wrappers ---- */
 
 #wrapper {
+  display: flex;
+  flex-direction: column;
   max-width: 1280px;
-  margin: 0 auto;
 }
 
 #wrapper-white {
@@ -80,24 +83,38 @@ hr.faded-edge {
 /* ---- Main Header ---- */
 
 .main-header {
-  text-align: center;
-  max-width: 90%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*max-width: 90%;*/
+  /*margin: 0 auto;*/
 }
 
 .name {
-  padding: .3em 0;
+  padding: .3rem 0;
+  text-align: center;
 }
 
-.menu {
+.menu
+ {
+  /*/flex: 1;*/
   padding: 0;
 }
 
+.menu ul {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  padding: 0px 5%;
+  text-align: center;
+}
+
 .menu li {
+  flex: 1 0 100%;
+  margin-bottom: 5px;
   list-style: none;
   background-color: white;
-  margin: 0 auto 5px;
-  max-width: 90%;
   padding: 12px 0;
   font-weight: 700;
   text-transform: uppercase;
