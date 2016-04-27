@@ -44,13 +44,7 @@ a:hover {
   color: #e0ab26;
 }
 
-ol, ul {
-  /*display: flex;*/
-  /*padding: 0;*/
-}
-
 li {
-  /*display: flex;*/
   font-size: .9em;
 }
 
@@ -69,49 +63,39 @@ hr.faded-edge {
 /* ---- Wrappers ---- */
 
 #wrapper {
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
   max-width: 1280px;
 }
 
 #wrapper-white {
-  margin: 0 auto;
   background-color: white;
   padding: 0 5%;
 }
 
-/* ---- Main Header ---- */
-
-.main-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /*max-width: 90%;*/
-  /*margin: 0 auto;*/
+#wrapper-white h2 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 45px 0 35px;
 }
+
+.max-width {
+  max-width: 1280px;
+}
+
+/* ---- Main Header ---- */
 
 .name {
   padding: .3rem 0;
   text-align: center;
 }
 
-.menu
- {
-  /*/flex: 1;*/
-  padding: 0;
-}
-
 .menu ul {
-  display: flex;
-  flex-direction: column;
-
   width: 100%;
   padding: 0px 5%;
   text-align: center;
 }
 
 .menu li {
-  flex: 1 0 100%;
   margin-bottom: 5px;
   list-style: none;
   background-color: white;
@@ -120,44 +104,36 @@ hr.faded-edge {
   text-transform: uppercase;
 }
 
-/* ---- Clearfix ---- */
-
-.clearfix::after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
 /* ============================
       Main body styles
 ==============================*/
 
-/* ---- Header styles ---- */
+/* ---- Profile styles ---- */
+
+.profile {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 5%
+}
 
 .profile-pic {
-  margin: 1.6em auto 1em;
-  max-width: 64%;
-  text-align: center;
+  margin: 1.6em 0 1em;
 }
 
 .main-text {
   text-align: center;
-  max-width: 90%;
-  margin: 0 auto;
   padding-bottom: 25px;
 }
 
 /* ---- Portfolio styles ---- */
 
 .portfolio {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
   padding-bottom: 20px;
   margin: 0 auto;
-}
-
-.portfolio h2 {
-  text-transform: uppercase;
-  padding: 45px 0 35px;
 }
 
 .portfolio h3 {
@@ -168,6 +144,10 @@ hr.faded-edge {
 
 .portfolio p {
   margin-bottom: 40px;
+}
+
+.portfolio-item {
+  transition: all .3s;
 }
 
 /* ---- Contact styles ---- */
@@ -192,21 +172,17 @@ hr.faded-edge {
 /* ---- Footer styles ---- */
 
 .footer {
-  margin: 10px auto 15px;
+  display: flex;
+  margin: 0 auto;
+  padding-bottom: 1rem;
   max-width: 90%;
 }
 
 .student {
-  float: left;
-
-}
-
-.student h2 {
-  display: inline-block;
+  margin-right: auto;
 }
 
 .back-to-top {
-  float:right;
   text-transform: uppercase;
 }
 
@@ -220,9 +196,17 @@ hr.faded-edge {
 
 @media screen and (min-width: 720px) {
 
+  /* ---- Wrappers @media 720 ---- */
+
   #wrapper-white {
     padding: 0 4%;
   }
+
+  #wrapper-white h2 {
+    padding-bottom: 20px;
+  }
+
+  /* ---- Main Header @media 720 ---- */
 
   .name {
     padding: 40px 0 3px;
@@ -235,53 +219,60 @@ hr.faded-edge {
     display: inline-block;
   }
 
+  /* ---- Profile styles @media 720 ---- */
+
   .profile {
-    max-width: 90%;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    /*max-width: 90%;*/
     margin: 0 auto;
   }
 
   .profile-pic {
-    float: right;
     width: 40%;
+    text-align: right;
     padding-bottom: 35px;
   }
 
   .main-text {
-    float: left;
-    text-align: left;
     width: 60%;
+    text-align: left;
     padding: .5em 2em 0 0;
   }
 
+  /* ---- Portfolio Styles @media 720 ---- */
+
   .portfolio-item {
-    float: left;
     width: 48%;
     margin: 1%;
-    transition: all .3s;
   }
 
-    .portfolio-item:nth-child(2n) {
-      clear: left;
-    }
+  /* ---- Contact styles @media 720 ---- */
+
+  .contact {
+    max-width: 700px;
+  }
+
+  .contact p {
+    font-size: 1.3em;
+  }
+
+  /* ---- Footer Styles @media 720 ---- */
 
   .back-to-top {
     display: none;
   }
 
   .footer-links {
-    float: right;
-    display: block;
+    display: flex;
   }
 
   .footer-links ul {
-    display: inline-block;
+    display: flex;
     list-style: none;
-    margin: 0 0;
-    padding: 0;
   }
 
   .footer-links li {
-    display: inline-block;
   }
 
   .footer-links a {
@@ -294,50 +285,32 @@ hr.faded-edge {
 
 @media screen and (min-width: 1024px) {
 
+/* ---- Main Header @media 1024 ---- */
+
+.main-header {
+  display:flex;
+  align-items: baseline;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
   .name {
     padding: 40px 0 3px;
+    margin-right: auto;
+  }
+
+  .menu ul {
+    display: flex;
   }
 
   .menu li {
     background: transparent;
     max-width: 90%;
     padding: 0 15px 15px;
-    display: inline-block;
   }
 
-  .profile {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-
-  .profile-pic {
-    float: right;
-    width: 40%;
-    padding-bottom: 35px;
-  }
-
-  .main-text {
-    float: left;
-    text-align: left;
-    width: 60%;
-    padding: .5em 2em 0 0;
-  }
+  /* ---- Portfolio Styles @media 1024 ---- */
 
   .portfolio-item {
-    float: left;
-    width: 32%;
+    width: 31.3333%;
   }
-
-  .portfolio-item:nth-child(2n) {
-    clear: none;
-  }
-
-  .portfolio-item:nth-child(3n) {
-    clear: left;
-  }
-
-  .back-to-top {
-    display: none;
-  }
-
-}
